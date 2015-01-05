@@ -119,9 +119,13 @@ run these commands:
     git clone git://github.com/jlemetay/permut.git
 
 
-Credit
-------
+Optional dependency
+-------------------
 
+The permut.vim plugin does not manage the column alignment, its job is only
+to swap columns of text.
+
+If you want automatic column alignment install the following Vim plugin:
 [Tabular](https://github.com/godlygeek/tabular)
 
 
