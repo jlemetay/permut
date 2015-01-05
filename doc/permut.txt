@@ -1,0 +1,85 @@
+*permut.txt*  Plugin for swapping text columns separated by arbitrary character.
+
+Version: 0.1
+Author:  JYLM
+Licence: Vim licence
+Last Change : 2015-01-05
+
+
+==============================================================================
+1. Introduction                                            permut-introduction
+
+Sometimes, when I meet a file with text data organized in columns, it takes me
+some minutes to re-arrange the order of columns as I wish, and in general, I
+use awk, sed or a combination of these external commands to do the treatment.
+I decided to find a Vim plugin that swap columns of text, not just colums of
+words as the "swapcol-vim" plugin (https://github.com/vim-scripts/swapcol.vim).
+I have not found one plugin that makes this work. So I decided to build it.
+I called it 'permut', a word derived from the french verb 'permuter', which
+means 'to swap'.
+
+In brief, permut.vim plugin allows to swap columns of text. It takes only
+some seconds, just the time to enter the command and it is very easy to use
+(from my standpoint =;o).
+
+
+==============================================================================
+2. Dependency                                                permut-dependency
+
+The permut.vim plugin does not manage the column alignment, its job is only
+to swap columns of text.
+
+If you want to have automatic column alignments, install the "tabular" Vim
+plugin (https://github.com/godlygeek/tabular).  By default, when the tabular
+Vim plugin is installed in your environment, the permut plugin uses it
+automatically to align the columns of text.
+
+If it is not what you want for any reason, this behavior can be inhibited.
+I.e. to prevent the permut plugin to use automatically the tabular plugin, set
+the following flag (normally in your ~/.vimrc file):
+let g:permut_disable_tabular_usage=1
+
+
+==============================================================================
+3. Usage                                                          permut-usage
+
+:<range> Permut <colnum1> <colnum2> [column_separator]
+
+By default, the column_separator is '|' character. The user can enter any kind
+of separator character (not present in the columns of text). The more usual
+separator character encountered are the ',' or ';' or ':' characters.
+
+
+==============================================================================
+4. Credits                                                      permut-credits
+
+This Vim plugin is my two cents to the Vim editor that helps me a lot in my
+daily work.
+
+From my point of view, it was not so simple to start with Vimscript.  Vim
+user's guide and reference manual are really rich in information, but lack
+something that gives a thread to build a Vim plugin directly (c.f. usr_41.txt).
+There are a lot of documentation but strangely it is impossible to find a simple template.
+Finally, I really started to grasp quickly the important Vimscript notions and
+take the first step thanks to the following documentation:
+
+[1] [Scripting the Vim editor, Part 1](http://www.ibm.com/developerworks/library/l-vim-script-1/)
+[2] [Scripting the Vim editor, Part 2](http://www.ibm.com/developerworks/library/l-vim-script-2/)
+[3] [Scripting the Vim editor, Part 3](http://www.ibm.com/developerworks/library/l-vim-script-3/)
+[4] [Scripting the Vim editor, Part 4](http://www.ibm.com/developerworks/library/l-vim-script-4/)
+[5] [Scripting the Vim editor, Part 5](http://www.ibm.com/developerworks/library/l-vim-script-5/)
+[6] [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com/)
+
+Moreover, after trying several plugin managers, I opted for "pathogen".
+It is small, clean (contrary to its name =;o) and efficient as I like and
+helped me to try a number of plugins easily.
+
+So thanks to the following great Vim contributors:
+Damian Conway
+Steve Losh
+Tim Pope
+
+
+==============================================================================
+Modeline:
+vim:tw=78:ts=8:ft=help:et:fdm=marker:fdl=0:norl
