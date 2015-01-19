@@ -1,9 +1,10 @@
 *permut.txt*  Plugin for swapping text columns separated by arbitrary character.
 
-Version: 0.1
+Version: 0.2
 Author:  JYLM
 Licence: Vim licence
-Last Change : 2015-01-05
+Created: 2015-01-05
+Last Change : 2015-01-19
 
 
 ==============================================================================
@@ -29,15 +30,21 @@ some seconds, just the time to enter the command and it is very easy to use
 The permut.vim plugin does not manage the column alignment, its job is only
 to swap columns of text.
 
-If you want to have automatic column alignments, install the "tabular" Vim
-plugin (https://github.com/godlygeek/tabular).  By default, when the tabular
-Vim plugin is installed in your environment, the permut plugin uses it
-automatically to align the columns of text.
+If you want to have automatic column alignments, install one of the following
+text aligner plugins in your environment:
+[1] [tabular plugin](https://github.com/godlygeek/tabular)
+[2] [vim-easy-align plugin](https://github.com/junegunn/vim-easy-align)
 
-If it is not what you want for any reason, this behavior can be inhibited.
-I.e. to prevent the permut plugin to use automatically the tabular plugin, set
-the following flag (normally in your ~/.vimrc file):
+By default, when one (at least) of these Vim plugins is installed in your
+environment, the permut plugin detect it and uses it automatically
+to align the columns of text.
+
+If it is not what you want for any reason, this behavior can be inhibited
+by setting configuration variables in your ~/.vimrc file.
+To prevent the permut plugin to use the tabular plugin, set
 let g:permut_disable_tabular_usage=1
+To prevent the permut plugin to use the vim-easy-align plugin, set
+let g:permut_disable_vim_easy_align_usage=1
 
 
 ==============================================================================

@@ -4,10 +4,10 @@
 "
 " Swap columns in text divided into columns by arbitrary characters.
 "
-" Version: 0.1
+" Version: 0.2
 " Author: JYLM
 " Created: 2015-01-05
-" Last Change: 2015-01-05
+" Last Change: 2015-01-19
 "
 "-----------------------------------------------------------------------
 
@@ -19,7 +19,7 @@ if exists('g:permut_loaded') || &cp
     finish
 endif
 let g:permut_loaded = 1
-let g:permut_version = 0.1
+let g:permut_version = 0.2
 
 
 "-----------------------------------------------------------------------
@@ -106,6 +106,9 @@ function! s:Permut(colnum1, colnum2, ...) range
     " Invoke another Vim plugin to handle the alignment of columns.
     if exists(":Tabularize") && !exists("g:permut_disable_tabular_usage")
         let align_command = "Tabularize /" . s:sep
+        execute align_command
+    elseif exists(":EasyAlign") && !exists("g:permut_disable_vim_easy_align_usage")
+        let align_command = a:firstline . ',' . a:lastline . " EasyAlign *" . s:sep
         execute align_command
     endif
 
