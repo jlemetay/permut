@@ -127,7 +127,7 @@ to swap columns of text.
 
 If you want automatic column alignment, then install one of the following Vim plugins:
 - [Tabular](https://github.com/godlygeek/tabular)
-- [vim-easy-align plugin](https://github.com/junegunn/vim-easy-align)
+- [Vim-easy-align](https://github.com/junegunn/vim-easy-align)
 
 
 License
