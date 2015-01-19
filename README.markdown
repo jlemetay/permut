@@ -125,9 +125,9 @@ Optional dependency
 The permut.vim plugin does not manage the column alignment, its job is only
 to swap columns of text.
 
-If you want automatic column alignment, then install one of the following Vim plugin:
-[Tabular](https://github.com/godlygeek/tabular)
-[vim-easy-align plugin](https://github.com/junegunn/vim-easy-align)
+If you want automatic column alignment, then install one of the following Vim plugins:
+- [Tabular](https://github.com/godlygeek/tabular)
+- [vim-easy-align plugin](https://github.com/junegunn/vim-easy-align)
 
 
 License
